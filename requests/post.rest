@@ -1,0 +1,80 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "90-82237" 
+}
+
+### Vääränmuotoinen numero
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "9082237" 
+}
+
+### Vääränmuotoinen numero
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "9-83232237" 
+}
+
+### Vääränmuotoinen numero
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "90383232237" 
+}
+
+### Vääränmuotoinen numero
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "90 383232237" 
+}
+
+####
+PUT http://localhost:3001/api/persons/644a338bc8f7780aa860481d
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "90-82238" 
+}
+
+########
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen"
+}
+
+########
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+      "number": "90 82237" 
+}
+
+### RENDER ############
+
+POST https://puhelinluettelo-backend-w1ls.onrender.com/api/persons
+Content-Type: application/json
+
+{
+      "name": "Erkki Junkkarinen",
+      "number": "90 82237" 
+}

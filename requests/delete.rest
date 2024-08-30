@@ -1,0 +1,8 @@
+
+DELETE http://localhost:3001/api/persons/6447d5557be66541bc4f9834
+
+### Malformatted id ###
+DELETE http://localhost:3001/api/persons/123
+
+### RENDER ########
+DELETE https://puhelinluettelo-backend-w1ls.onrender.com/api/persons/1

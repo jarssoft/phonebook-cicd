@@ -1,0 +1,13 @@
+GET http://localhost:3001/api/persons
+
+###
+GET http://localhost:3001/api/persons/6447d0dcdbf047678be7d525
+
+### malformatted id
+GET http://localhost:3001/api/persons/123
+
+### RENDER
+GET https://puhelinluettelo-backend-w1ls.onrender.com/api/persons
+
+###
+GET https://puhelinluettelo-backend-w1ls.onrender.com/api/persons/1
