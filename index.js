@@ -111,7 +111,7 @@ app.get('/api/persons', (request, response) => {
 
 app.get('/version', (req, res) => {
   res.send(
-      `1.0`); 
+      `1.0`);
 });
 
 const errorHandler = (error, request, response, next) => {
