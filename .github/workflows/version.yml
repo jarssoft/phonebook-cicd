@@ -15,11 +15,12 @@ jobs:
       env:
         COMMIT_MESSAGES: ${{  contains(toJson(github.event.commits.*.message), '#nextversion') }}
       run: echo "$COMMIT_MESSAGES"
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: '0'
       if: ${{ env.COMMIT_MESSAGES == 'true' }}
       run: echo 'this step is executed'
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: '0'
 
     - name: Bump version and push tag
       uses: anothrNick/github-tag-action@v1 # Don't use @master or @v1 unless you're happy to test the latest version
