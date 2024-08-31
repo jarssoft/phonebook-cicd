@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: commit messages
       env:
-        COMMIT_MESSAGES: ${{  contains(toJson(github.event.commits.*.message), '#nextversion' }}
+        COMMIT_MESSAGES: ${{  contains(toJson(github.event.commits.*.message), '#nextversion') }}
       run: echo "$COMMIT_MESSAGES"
     - uses: actions/checkout@v4
       with:
