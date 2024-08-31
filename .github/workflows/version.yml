@@ -15,7 +15,7 @@ jobs:
       env:
         COMMIT_MESSAGES: ${{  contains(toJson(github.event.commits.*.message), '#nextversion') }}
       if: ${{ env.COMMIT_MESSAGES == 'true' }}
-      run: echo 'this step is executed'
+      run: echo 'next version'
 
     - uses: actions/checkout@v4
       with:
