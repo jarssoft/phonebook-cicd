@@ -12,9 +12,9 @@ jobs:
       contents: write
     steps:
     - name: commit messages
-        env:
-          COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
-        run: echo "$COMMIT_MESSAGES"
+      env:
+        COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
+      run: echo "$COMMIT_MESSAGES"
     - uses: actions/checkout@v4
       with:
         fetch-depth: '0'
