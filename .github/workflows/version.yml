@@ -14,7 +14,6 @@ jobs:
     - name: commit messages
       env:
         COMMIT_MESSAGES: ${{  contains(toJson(github.event.commits.*.message), '#nextversion') }}
-      run: echo "$COMMIT_MESSAGES"
       if: ${{ env.COMMIT_MESSAGES == 'true' }}
       run: echo 'this step is executed'
 
