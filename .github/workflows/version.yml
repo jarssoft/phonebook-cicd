@@ -1,4 +1,5 @@
 # example 1: on push to master
+# fake edit
 name: Bump version
 
 env:
